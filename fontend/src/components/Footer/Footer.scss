@@ -1,0 +1,140 @@
+@use '../../scss/' as *;
+
+.footer {
+    margin-top: 40px;
+    max-width: 100%;
+    
+}
+
+.footer__email {
+    height: 120px;
+    background-color: #333;
+    padding: 0px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__email-icon {
+    font-size: 3rem;
+    margin-right: 5px;
+}
+.footer__email-header {
+    color: $text-white;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    flex: 1;
+}
+
+.footer__search {
+    position: relative;
+
+    height: 50px;
+    width: 480px;
+    display: block;
+    background: #686868;
+    display: flex;
+    border-radius: 40px;
+    
+}
+
+.register-email {
+    padding: 5px 20px;
+    height: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    flex: 1;
+    color:$text-white;
+    font-size: 2rem;
+    font-weight: 200;
+
+    &::placeholder {
+        color:$text-white;
+    }
+}
+
+.footer__btn-register {
+    width: 148px;
+    border-radius: 50px;    
+    outline: none;
+    border: none;
+    margin: 5px;
+  
+    transition: all 0.4s linear;
+    background-color:$primary;
+    cursor: pointer;
+    color:$white;
+   
+    font-size: 2rem;
+    &:hover {
+        color:$primary;
+        background-color: #333;
+    }
+}
+.footer__voucher {
+    flex: 1;
+  text-align: right;
+
+  & p {
+      color:$text-white;
+      font-size: 1.4rem;
+      & span {
+          color:$primary;
+          font-size: 3rem;
+      }
+  }
+}
+
+.footer__form-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    margin-left: 10px;
+    display: none;
+}
+
+.footer__form-message.invalid {
+    color: red;
+    display: block;
+}
+
+.footer__bottom {
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@include tablet {
+    .footer__email {
+        flex-direction: column;
+        height: 170px;
+    }
+
+    .footer__voucher {
+        margin-top: 10px;
+    }
+}
+
+
+@include mobile {
+    .footer__search {
+        max-width: 100%;
+    }
+
+    .footer__email {
+        padding: 0 0px;
+    }
+
+    .register-email {
+        width: 200px;
+    }
+}
